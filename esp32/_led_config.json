@@ -1,0 +1,6 @@
+{
+    "brightness_panel": 5,
+    "brightness_piano_keys": 100,
+    "matrix_panel_width": 64,
+    "help":"This file is updated by program based on user input via bluetooth. Set width to 32 or 64 only"
+}
