@@ -1,0 +1,67 @@
+Check Settings - during Setup
+config.json - midi and anim files details
+_led_config.json - program controlled parameters, brightness_panel and matrix_panel_width
+
+Execution:
+boot.py 
+- runs on every boot
+
+main.py
+- runs after boot
+- runs welcome animation once
+- calls main_bluetooth
+
+main_bluetooth 
+- starts bluetooth service
+- listens for 2 hours session, restart piano after that
+
+ble_helper 
+- called by main_bluetooth service, action based on user inputs
+
+led_display 
+-single file with word display and midi play
+-can show midi file name and midi raindrop
+
+led_matrix_piano_keys_w6b3
+-midi raindrop display
+
+anim_display 
+-to display falling animation based on file
+
+
+Utilities Files:
+matrix_util 
+- helper functions for display
+esp32_util
+
+midi_data
+-reads config.json and returns midi /anim bitmap data and properties
+
+ascii_matrix
+ - Character to bitmap matrix
+ascii_bitmap.txt
+  - bitmap file having all char bitmap
+ 
+daisy9x32
+- returns LED Sequence numbers for 8x32/64 panel
+
+esp32_colors
+- colors definitions
+- color palettes
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+EOF
+-
