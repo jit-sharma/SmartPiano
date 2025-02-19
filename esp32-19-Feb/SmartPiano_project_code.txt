@@ -1,0 +1,50 @@
+anim64_1.txt
+anim_display.py
+ascii_bitmap.txt
+ascii_matrix.py
+
+a_piano6x3_LED_test.py - Program to test Piano Key LEDs 
+ble_helper.py
+
+ble_secrets.json - not used
+boot.py
+
+config.json
+daisy9x32.py - no more in use, used for single 8x32 display
+daisy_chained.py
+
+esp32_colors.py
+esp32_util.py
+
+led_display.py
+led_matrix_piano_keys_w6b3.py - no more in use
+
+main.py
+main353.py - test file
+
+main_esp32
+main_esp32_v2
+main_Esp32_matrix
+main_x - test file
+matrix_util.py
+
+midi_bluetooth.py
+midi_data.py
+
+midi_drop_test.txt
+
+msg_display.py
+neopixel_reset.py
+
+pg13_Ode_To_Joy_bitmap4.txt 32 notes file
+pg84_Fur_Elise_53_4.txt 53 Notes file
+
+piano_keys_led.py
+
+webrepl_cfg.py
+wifimgr.py
+wifimgr_main.py
+_led_config.json
+
+
+
