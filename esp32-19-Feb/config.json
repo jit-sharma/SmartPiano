@@ -1,0 +1,101 @@
+{
+    "help":"Update midi_data for Midi and Animation files",
+    "play_midi_num": 1,
+    "color_palette": 1,
+    "piano_start_note": "C2",
+    "brightness_piano_keys": 100, 
+    "brightness_panel": 2,
+    "midi_data":
+    {
+      "20": {
+        "id": "Welcome",
+        "name": "welcome_animX.txt",
+        "start_note": 0,
+        "duration": 30,
+        "frame_delay": 50,
+        "color_palette": "rainbow"
+      },    
+      "3": {
+        "id": "level1: right hand only",
+        "name": "01 Right Hand warm up.txt",
+        "start_note": 48,
+        "duration": 30,
+        "frame_delay": 250,
+        "color_palette": "right"
+      },
+      "2": {
+        "id": "level1: left hand only",
+        "name": "02 Left Hand warm up.txt",
+        "start_note": 48,
+        "duration": 20,
+        "frame_delay": 250,
+        "color_palette": "left"        
+      },     
+      "1": {
+        "id": "level2: midi song",
+        "name": "03 Ode To Joy.txt",
+        "start_note": 48,
+        "duration": 20,
+        "frame_delay": 250,
+        "color_palette": "rainbow"  
+      },  
+      "4": {
+        "id": "level2: Hindi - Tum hi ho",
+        "name": "10 tum hi ho.txt",
+        "start_note": 48,
+        "duration": 20,
+        "frame_delay": 250,
+        "color_palette": "rainbow"  
+      }, 
+      "5": {
+        "id": "level2: desc",
+        "name": "midi.txt",
+        "start_note": 48,
+        "duration": 20,
+        "frame_delay": 250,
+        "color_palette": "rainbow"  
+      }, 
+      "6": {
+        "id": "level2: desc",
+        "name": "midi.txt",
+        "start_note": 48,
+        "duration": 20,
+        "frame_delay": 250,
+        "color_palette": "rainbow"  
+      }, 
+      "7": {
+        "id": "level2: desc",
+        "name": "midi.txt",
+        "start_note": 48,
+        "duration": 20,
+        "frame_delay": 250,
+        "color_palette": "rainbow"  
+      }, 
+      "8": {
+        "id": "level2: desc",
+        "name": "midi.txt",
+        "start_note": 48,
+        "duration": 20,
+        "frame_delay": 250,
+        "color_palette": "rainbow"  
+      },       
+      "9": {
+        "id": "level3: complex",
+        "name": "midi.txt",
+        "start_note": 48,
+        "duration": 20,
+        "frame_delay": 250,
+        "color_palette": "rainbow"  
+      },
+     "10": {
+        "id": "level3: Hindi",
+        "name": "10 tum hi ho.txt",
+        "start_note": 48,
+        "duration": 20,
+        "frame_delay": 250,
+        "color_palette": "rainbow"  
+      }
+    }
+
+
+}
