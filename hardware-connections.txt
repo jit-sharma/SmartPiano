@@ -1,0 +1,21 @@
+ESP32
+connect to 1 or 2V charger or laptop using Microusb cable or Type C cable
+
+ESP Breadboard (Type C):
+white jumper wire at pin#4 on breadboard (GND - ground)
+Purple jumper wire at pin#7 on breadboard (D4 - Data Pin 4)
+
+ESP Breadboard (Micro USB): (testing LEDs)
+white wire at pin#18 on breadboard (GND - ground)
+green wire at pin#23 on breadboard (D4 - Data Pin 4)
+red jumper wire at pin# 12 on breadboard (3.3v output power for LED upto 60 count)
+DO NOT CONNECT EXTERNAL DC ADAPTER
+
+"KEEP 5V Adapter power off while connecting or disconnecting"
+
+1. Connect ESP32 Male JST to first panel Female JST connector
+2. Connect male JST of one display to another display
+3. Connect male of second panel to Piano Keys\
+4. Connect 5V 10A DC adapter to DC female power connector
+5. connect to 1 or 2V charger or laptop using Microusb cable or Type C cable
+
