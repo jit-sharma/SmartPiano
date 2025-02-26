@@ -1,0 +1,19 @@
+https://newbiely.com/tutorials/esp32-micropython-tutorial
+
+BTREE file based database 
+https://docs.micropython.org/en/latest/library/btree.html
+
+
+Two async processes to play and record the input
+clock sync/ save against time
+
+save time of play , start - end of each row
+
+button to capture input/press event and time
+tactical button press
+touch panel test with key press
+scan at 25 ms?
+
+
+read data at single pin
+multiplexed input or onewire input ???
