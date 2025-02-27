@@ -17,3 +17,4 @@ scan at 25 ms?
 
 read data at single pin
 multiplexed input or onewire input ???
+CD74HC4067 with esp32 micropython
