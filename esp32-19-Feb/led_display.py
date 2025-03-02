@@ -7,6 +7,7 @@ MIDI to 8x32 LED Matrix display along with Piano key 6,3 White/Black LED
 Displays MIDI bitmap data in raindrop style
 + 1 keyboard row added to the display, 6 LED in White an3 3 in Black Keys for 32 keys
 Usages bitmap file csv/txt, config.json,
+
 Python files:
 esp32_colors.py: Colors and Color palette
 midi_data.py: Reads midi Bitmap data, based on config.json
@@ -14,7 +15,7 @@ daisy9x32.py: for LED address of daisy chained 8x32 display
 esp32_util.py: esp32 util functions
 piano_keys_led.py: for getting LED sequence numbers for 32 White and Black keys
 matrix_util.py Matrix utility functions
-ascii_matrix.py ASCII datamap
+
 
 
 ==============================================================================
@@ -28,7 +29,7 @@ set print level to _INFO for less output, _DEBUG for debugging
     * {v# [date] user: comments}
     * v1 [07-Feb-25] Jit Sharma: First version
     * v3 [09-feb-25] Jit Sharma: Clean up
-
+    * v4 [02-mar-25] Jit Sharma: Starting code to read the key pressed input
 Last Updated: 11-Feb-25
 =====
 """
@@ -111,6 +112,11 @@ def display_mat(_df, np, pk_led_seq, esp32=False, disp_color=None, brightness=10
     mu.display_matrix_keys(_df, np, pk_led_seq=pk_led_seq, esp32=esp32, disp_color=disp_color,
                                   brightness=brightness, color_palette=color_palette)
 
+def process_key_pressed():
+   print(f"process_key_pressed function")
+   # read shift registers and store in BTREE database
+   
+   pass
 
 # Print midi row with separator as pipe every octave of 12 keys notes
 def print_midi_row(row):
@@ -165,7 +171,15 @@ def main(name='There', midi_file_id=1, play_msg = True):
                 # calling display matrix
                 display_mat(led_matrix, np, pk_led_seq=pk_led_seq, esp32=esp32, disp_color=None,
                             brightness=BRIGHTNESS, color_palette=cp)
-                
+
+                # add code to read the data from shift registers
+                # At an interval of 25 ms, 7 times, time.sleep_ms(25)
+                # for j in range(7):
+                #    time.sleep_ms(25)
+                #    process_key_pressed() read and store in BTREE database
+                # Store in BTree database as 4 bytes
+                # extra 23ms to match 250-52 ms, check for addition time consumed
+                # 
                 time.sleep_ms(_frame_delay - 52)  # Correction for time taken for program 52 ms
 
             # Post Midi Raindrop
