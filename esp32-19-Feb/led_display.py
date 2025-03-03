@@ -154,6 +154,7 @@ def main(name='There', midi_file_id=1, play_msg = True):
         # initialize a 2 D list with 0 using lambda function
         led_matrix = [[0 for i in range(matrix_cols)] for j in range(matrix_rows)]
         print(f'led_display.py: Led Matrix Size: {len(led_matrix)}x{len(led_matrix[0])}')
+        empty_row = [0 for i in range(matrix_cols)] #  len(midi_data[0])
         ############################################################################
         if play_msg:
             m.main(msg = midi_filename, mode =1)
@@ -162,10 +163,16 @@ def main(name='There', midi_file_id=1, play_msg = True):
         print("\n Raindrop Start ms:", mstr(), BRIGHTNESS)
         # Starting Midi Raindrop
         if PLAY_MIDI_RAINDROP:
-            for i in range(midi_data_rows):
-                if print_level <= _INFO:
-                    print(f'\r{mstr(start)} {frame_delay * i / 1000:5.2f}/{midi_time_length:5.2f} sec i={i:3} ', end="")
-                next_row = midi_data[i]
+            for i in range(midi_data_rows+9):
+                # if print_level <= _INFO:
+                #    print(f'\r{mstr(start)} {frame_delay * i / 1000:5.2f}/{midi_time_length:5.2f} sec i={i:3} ', end="")
+                if i<midi_data_rows:
+                   print(f'\r{mstr(start)} {frame_delay * i / 1000:5.2f}/{midi_time_length:5.2f} sec i={i:3} ', end="")
+                   next_row = midi_data[i]
+                else:
+                   print(f'\r{mstr(start)} 9 rows scroll {i-midi_data_rows}  sec i={i:3} ', end="")
+                   next_row = empty_row
+                # run loop for 9 empty rows
                 print_midi_row(next_row)
                 led_matrix = shift_row(led_matrix, next_row)
                 # calling display matrix
@@ -179,7 +186,7 @@ def main(name='There', midi_file_id=1, play_msg = True):
                 #    process_key_pressed() read and store in BTREE database
                 # Store in BTree database as 4 bytes
                 # extra 23ms to match 250-52 ms, check for addition time consumed
-                # 
+                # id = i - 8, at i=8, first time piano key will lit with i=0 mididata[0]
                 time.sleep_ms(_frame_delay - 52)  # Correction for time taken for program 52 ms
 
             # Post Midi Raindrop
