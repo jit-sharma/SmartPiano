@@ -42,13 +42,23 @@ correct key pressed in 250ms window (1 present for 1)
 incorrect key pressed (1 present for 0)
 Incorrect/correct key highlighting?? RED and GREEN, do not use RED and GREEN in Midi
 Delay of 8 rows, compare with n-8th row, starting when  n=8
-
-Analytics:
-run at end of program
+at end of program
 Correct key %
 Incorrect key %
-Excel with raindrop key map? correct/incorrect keys highlighted
 result as Bluetooth output?
+
+Analytics in Excel in Laptop:
+Open reference midi file and user key input file
+Compare
+Prepare summary-
+Correct key %
+Incorrect key %
+Excel:
+Use a predefined template with conditional formatting
+Original Raindrop
+User Raindrop
+ - with correct (green 1)/incorrect (missed-red -1,extra-blue 2) keys highlighted
+
 
 
 
