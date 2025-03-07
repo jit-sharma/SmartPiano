@@ -1,7 +1,8 @@
 https://newbiely.com/tutorials/esp32-micropython-tutorial
 
 button to capture input/press event and time
-tactical button press
+tactical button press for testing, click sound
+Soft touch silicon button
 touch panel test with key press
 
 read data at single pin
@@ -9,12 +10,19 @@ multiplexed input or onewire input ???
 CD74HC4067 with esp32 micropython
 
 HARDWARE:
-shift register - daisy chained
+shift register could be daisy chained, can take input in multiple of 8
 74HC165: PISO 8 bit register x 4
+
 6 inch, 15 cm - 12 keys, one octave 
 6*4 single board, cut into two 6x2
-place tacitcle Push button and register on pcb
-5v supply from esp32
+place soft Push button on pcb
+3.3v supply from esp32 for button and Shift Register
+
+74HC165 single register on Breadboard in 22 number box with 
+Shift Register chip
+2-pin jst connector for power
+3-pin jst connector for Latch, clock and Data In
+4-pin x2 jst connector for key  data input lines/to be connected to buttons output
 
 SOFTWARE:
 scan at 25 ms with in display matrix loop
@@ -23,13 +31,23 @@ BTREE file based database
 https://docs.micropython.org/en/latest/library/btree.html
 
 
-record the input
+record the input during play - led_display.py
 save  time, mididata row id , convert user input to single row
 
-save mididata along with user inputs in binary format/bytes in file
+save mididata along with user inputs in binary format/int bytes in file - 8 bits eq int 0-255
+delete files older than a day.
+
+Validation:
 correct key pressed in 250ms window (1 present for 1)
 incorrect key pressed (1 present for 0)
+Incorrect/correct key highlighting?? RED and GREEN, do not use RED and GREEN in Midi
+Delay of 8 rows, compare with n-8th row, starting when  n=8
+
+Analytics:
 run at end of program
+Correct key %
+Incorrect key %
+Excel with raindrop key map? correct/incorrect keys highlighted
 result as Bluetooth output?
 
 
