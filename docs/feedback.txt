@@ -5,9 +5,9 @@ tactical button press for testing, click sound
 Soft touch silicon button
 touch panel test with key press
 
-read data at single pin
-multiplexed input or onewire input ???
-CD74HC4067 with esp32 micropython
+--xx read data at single pin
+--xx multiplexed input or onewire input ???
+--xx CD74HC4067 with esp32 micropython
 
 HARDWARE:
 shift register could be daisy chained, can take input in multiple of 8
@@ -25,15 +25,11 @@ Shift Register chip
 4-pin x2 jst connector for key  data input lines/to be connected to buttons output
 
 SOFTWARE:
+led_display.py, process_key_input.py
 scan at 25 ms with in display matrix loop
 
-BTREE file based database 
-https://docs.micropython.org/en/latest/library/btree.html
-
-
 record the input during play - led_display.py
-save  time, mididata row id , convert user input to single row
-
+saves  mididata row id and int for 8 bits
 save mididata along with user inputs in binary format/int bytes in file - 8 bits eq int 0-255
 delete files older than a day.
 
@@ -48,11 +44,13 @@ Incorrect key %
 result as Bluetooth output?
 
 Analytics in Excel in Laptop:
-Open reference midi file and user key input file
+transfer files to laptop
+Open reference midi file and user key input file in Laptop python program
 Compare
 Prepare summary-
 Correct key %
 Incorrect key %
+generate output in excel format in pre-formated template
 Excel:
 Use a predefined template with conditional formatting
 Original Raindrop
