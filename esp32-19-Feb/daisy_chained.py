@@ -87,7 +87,10 @@ def get_dcdf(matrix_cols):
 
 # Convert to masked
 
-def get_masked_dcdf(matrix_cols, masked):
+def get_masked_dcdf(matrix_cols):
+    # 5,11, 17, 21, 29, 2, 8, 14,20,26,32
+    # index starting 0, 4,10,16,20,28, 33, 39, 45, 51, 57, 63 
+    masked = [4, 10, 16, 20, 28, 33, 39, 45, 51, 57, 63]
     if matrix_cols == 32:
         dcdf = get_masked_dc8x32(masked)
     else:
